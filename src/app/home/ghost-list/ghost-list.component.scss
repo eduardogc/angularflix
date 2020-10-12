@@ -1,0 +1,25 @@
+@import 'ghost-animations.scss';
+
+.program-list {
+  display: flex;
+  margin-bottom: 3px;
+}
+.program-item {
+  display: flex;
+  margin: 0 3px;
+  align-self: center;
+  cursor: pointer;
+}
+.animated-square {
+  width: 248.4px;
+  height: 139.725px;
+  background: #494949;
+  @include animate-ghost-line;
+}
+@media screen and (max-width: 768px) {
+  .animated-square {
+    width: 216px;
+    height: 121.5px;
+    background: #494949;
+  }
+}

@@ -1,0 +1,4 @@
+<ul class="autocomplete" *ngIf="show">
+  <li *ngIf="data?.length == 0" class="autocomplete-item" (click)="search()">Nenhum resultado.</li>
+  <li class="autocomplete-item" (click)="search(item.id)" *ngFor="let item of data">{{ item.title }}</li>
+</ul>

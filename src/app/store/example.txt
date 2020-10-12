@@ -1,0 +1,1 @@
+If you use a solution like ngrx/store, it would be placed here.

@@ -1,0 +1,89 @@
+.live-panel {
+  margin-top: -20px;
+  background: url('http://localhost:4200/assets/img/TVCHKids.jpg') 100%/100%;
+  background-size: cover;
+  height: 250px;
+}
+.live-panel-overlay {
+  background: rgba(0,0,0,0.27);
+  position: absolute;
+  top: 55px;
+  height: 250px;
+  width: 100%;
+}
+.live-text-block {
+  position: absolute;
+  top: 90px;
+  width: 100%;
+  margin: -35px -35px 0 0;
+}
+.live-title {
+  text-align: center;
+  padding-top: 81px;
+  font-size: 1.9em;
+  font-weight: bold;
+  color: #fdfdfd;
+}
+.live-subtitle {
+  text-align: center;
+  padding-top: 9px;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #fdfdfd;
+}
+.content {
+  position: absolute;
+  height: auto;
+  width: auto;
+  background: rgba(0, 0, 0, 0.54);
+  color: #f1f1f1;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 90;
+  top: 55px;
+  padding: 15px;
+}
+
+.live-list {
+  padding: 5%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+.live-item {
+  margin-bottom: 27px;
+  margin-left: 27px;
+  cursor: pointer;
+}
+.live-item-img {
+  width: 240px;
+  height: 135px;
+}
+
+@media screen and (max-width: 615px) {
+  .live-item-img {
+    width: 168px;
+    height: 94.5px;
+  }
+}
+@media screen and (max-width: 451px) {
+  .live-item {
+    margin-bottom: 9px;
+    margin-left: 9px;
+  }
+  .live-item-img {
+    width: 153.6px;
+    height: 86.4px;
+  }
+}
+
+@media screen and (max-width: 451px) {
+  .live-item {
+    margin-bottom: 9px;
+    margin-left: 9px;
+  }
+  .live-item-img {
+    width: 132px;
+    height: 74.25px;
+  }
+}

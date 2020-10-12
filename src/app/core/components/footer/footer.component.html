@@ -1,0 +1,13 @@
+<div class="footer">
+  <div class="footer-social-networks">
+    <span class="social-network" (click)="redirect('facebook')"><i class="fab fa-facebook fa-lg"></i></span>
+    <span class="social-network" (click)="redirect('instagram')"><i class="fab fa-instagram fa-lg"></i></span>
+    <span class="social-network" (click)="redirect('youtube')"><i class="fab fa-youtube fa-lg"></i></span>
+  </div>
+  <div class="footer-links">
+    <a class="footer-link" [routerLink]="['/contato']">{{ 'footer.contact' | translate }}</a>
+    <a class="footer-link" [routerLink]="['/newsletter']">{{ 'footer.newsletter' | translate }}</a>
+    <a class="footer-link" [routerLink]="['/sobre-nos']">{{ 'footer.about' | translate }}</a>
+  </div>
+  <p class="footer-copyright">© 2020 Angularflix. {{ 'footer.allRightsReserved' | translate }}</p>
+</div>

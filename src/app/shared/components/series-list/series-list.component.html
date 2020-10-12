@@ -1,0 +1,21 @@
+<ul class="program-list" id="series-list-Angularflix">
+  <li class="program-item" *ngFor="let seriesItem of seriesList">
+    <lounge-item  [title]="seriesItem.title"
+                  [imgIconUrl]="seriesItem.imgIconUrl"
+                  [imgBackgroundUrl]="seriesItem.imgBackgroundUrl"
+                  [playlistId]="seriesItem.playlistId"
+                  [description]="seriesItem.description"
+                  [borderColor]="seriesItem.color"
+                  (openInfo)="seeMore($event)">
+    </lounge-item>
+  </li>
+</ul>
+<span class="roll-left" (click)="moveLeft()" [ngClass]="{ 'active': hoverList && leftScrollable }"><i class="fas fa-chevron-left fa-2x"></i></span>
+<span class="roll-right" [ngClass]="{ 'active': hoverList }" (click)="moveRight()"><i class="fas fa-chevron-right fa-2x"></i></span>
+<!-- <lounge-info  [title]="activeLounge.title"
+              [description]="activeLounge.description"
+              [playlistId]="activeLounge.playlistId"
+              [imgBackgroundUrl]="activeLounge.imgBackgroundUrl"
+              [active]="activeLounge.active"
+              (close)="closeInfo()">
+</lounge-info> -->

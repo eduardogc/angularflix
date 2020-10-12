@@ -1,0 +1,14 @@
+<div class="Angularflix-content-wrapper">
+  <div class="live-panel">
+    <div class="live-panel-overlay"></div>
+    <div class="live-text-block">
+      <p class="live-title">É hora de Angularflix Kids!</p>
+      <p class="live-subtitle">Vem brincar com a gente e aprender muito!</p>
+    </div>
+  </div>
+  <ul class="live-list">
+    <li class="live-item" *ngFor="let kidsVideo of kidsVideos" (click)="redirectTo(kidsVideo.videoId, kidsVideo.playlistId)">
+      <img class="live-item-img" [src]="kidsVideo.imgUrl" alt="program">
+    </li>
+  </ul>
+</div>

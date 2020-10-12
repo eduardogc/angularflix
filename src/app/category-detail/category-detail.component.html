@@ -1,0 +1,14 @@
+<div class="Angularflix-content-wrapper">
+  <div class="live-panel" [ngStyle]="{ 'background': 'url('+ categoryInfo.imgBackgroundUrl +')' }">
+    <div class="live-panel-overlay"></div>
+    <div class="live-text-block">
+      <p class="live-title">{{ categoryInfo.title }}</p>
+      <p class="live-subtitle">{{ categoryInfo.subtitle }}</p>
+    </div>
+  </div>
+  <ul class="live-list">
+    <li class="live-item" *ngFor="let categoryVideo of categoryVideos" (click)="redirectTo(categoryVideo.videoId, categoryVideo.playlistId)">
+      <img class="live-item-img" [src]="categoryVideo.imgUrl" alt="program">
+    </li>
+  </ul>
+</div>

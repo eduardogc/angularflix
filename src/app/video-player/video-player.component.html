@@ -1,0 +1,30 @@
+<div class="Angularflix-content-wrapper">
+    <div class="video-container">
+      <div [innerHtml]="youtubeIframe"></div>
+    </div>
+    <share-buttons
+      class="share-align"
+      [theme]="'default'"
+      [include]="['facebook','twitter','whatsapp','telegram','copy']"
+      [show]="5"
+      [url]="shareUrl"
+      [autoSetMeta]="false"
+    ></share-buttons>
+    <div class="video-title-block">
+      <div class="video-title-flex">
+        <h3 class="video-title">{{ title }}</h3>
+        <h6 class="video-playlist">{{ playlistName }}</h6>
+      </div>
+      <div class="video-accordion-mobile" (click)="toggleDescription()">
+        <i class="fas fa-chevron-down" *ngIf="descriptionToggle"></i>
+        <i class="fas fa-chevron-right" *ngIf="!descriptionToggle"></i>
+      </div>
+    </div>
+    <div class="video-description" *ngIf="descriptionToggle">
+      <pre class="pre-adjust" [innerHtml]="description"></pre>
+    </div>
+    <div class="related-videos-block" *ngIf="relatedVideos && relatedVideos.length">
+      <h3 class="related-videos-title">Vídeos Relacionados</h3>
+      <program-list [data]="relatedVideos" [playlistId]="playlistId"></program-list>
+    </div>
+</div>

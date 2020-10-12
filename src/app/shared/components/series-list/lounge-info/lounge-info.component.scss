@@ -1,0 +1,42 @@
+.lounge-item-info {
+    display: flex;
+    justify-content: space-between;
+    background-color: #191919;
+    background-size: 67% 360px;
+    min-height: 360px;
+}
+.lounge-info-block {
+  position: relative;
+  z-index: 90;
+  padding: 9px 19px;
+  width: 390px;
+}
+.lounge-info-title {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #fdfdfd;
+  margin-top: 9px;
+  margin-bottom: 36px;
+}
+.lounge-info-close {
+  width: 0px;
+  position: absolute;
+  right: 36px;
+  z-index: 99;
+  margin-top: 19px;
+  color: #fdfdfd;
+  cursor: pointer;
+}
+.lounge-info-description {
+  color: #fdfdfd;
+  margin-bottom: 19px;
+}
+.btn-see-more {
+  margin-left: 35%;
+  background: #FE6700;
+  border: 1px solid #fdfdfd;
+  padding: 5px 30px;
+  color: #fdfdfd;
+  font-size: 0.9em;
+  cursor: pointer;
+}

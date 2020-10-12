@@ -1,0 +1,32 @@
+<div class="subscribe-link" *ngIf="subscribeActive">
+  <div class="subscribe-link-description">
+    Receba as novidades da Angularflix!
+    <i class="fab fa-whatsapp fa-lg cursor" (click)="redirectWhatsapp()"></i>
+    <i class="fas fa-envelope fa-lg cursor" (click)="redirectMail()"></i>
+  </div>
+  <div class="subscribe-link-close">
+    <i class="fas fa-times cursor" (click)="hideSubscribe()"></i>
+  </div>
+</div>
+<div class="Angularflix-content-wrapper">
+  <h3 class="home-programs">Nossas Séries</h3>
+  <series-list></series-list>
+  <div class="program-block" *ngIf="isLoading">
+    <h3 class="home-programs">...</h3>
+    <ghost-list></ghost-list>
+    <h3 class="home-programs">...</h3>
+    <ghost-list></ghost-list>
+    <h3 class="home-programs">...</h3>
+    <ghost-list></ghost-list>
+    <h3 class="home-programs">...</h3>
+    <ghost-list></ghost-list>
+    <h3 class="home-programs">...</h3>
+    <ghost-list></ghost-list>
+  </div>
+  <div *ngIf="!isLoading">
+    <div class="program-block" *ngFor="let videoItem of videos" >
+      <h3 class="home-programs">{{ videoItem.name }}</h3>
+      <program-list [data]="videoItem.items" [playlistId]="videoItem.id" *ngIf="!isLoading"></program-list>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<ul class="program-list" [id]="playlistId">
+  <li class="program-item" *ngFor="let programItem of data" (click)="redirectTo(programItem.videoId, programItem.playlistId)">
+    <img class="program-item-img" [src]="programItem.imgUrl" alt="program">
+  </li>
+</ul>
+<span class="roll-left" (click)="moveLeft(playlistId)" [ngClass]="{ 'active': hoverList && leftScrollable && !isTouch }"><i class="fas fa-chevron-left fa-2x"></i></span>
+<span class="roll-right" [ngClass]="{ 'active': hoverList && !isTouch }" (click)="moveRight(playlistId)"><i class="fas fa-chevron-right fa-2x"></i></span>

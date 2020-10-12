@@ -1,0 +1,8 @@
+<div class="sidebar" [ngClass]="{ 'active': toggle }">
+  <ul class="sidebar-content">
+    <li class="sidebar-item" [ngClass]="{ 'active': activeUrl === '/' }" (click)="redirect('/')">{{ 'header.home' | translate }}</li>
+    <li class="sidebar-item" [ngClass]="{ 'active': activeUrl === '/kids' }" (click)="redirect('/kids')">{{ 'header.kids' | translate }}</li>
+    <li class="sidebar-item" [ngClass]="{ 'active': activeUrl === '/lancamentos' }" (click)="redirect('/lancamentos')">{{ 'header.releases' | translate }}</li>
+  </ul>
+</div>
+<div class="overlay" (click)="closeSidebar()" [ngClass]="{ 'active': toggle }"></div>

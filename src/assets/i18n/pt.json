@@ -1,0 +1,21 @@
+{
+  "header": {
+    "home": "Início",
+    "kids": "Kids",
+    "live": "Ao Vivo",
+    "releases": "Lançamentos",
+    "blog": "Blog",
+    "podcast": "Podcast"
+  },
+  "footer": {
+    "partnership": "Angularflix é uma parceria",
+    "and": "e",
+    "allRightsReserved": "Todos os direitos reservados.",
+    "newsletter": "Newsletter",
+    "about": "Sobre",
+    "contact": "Contato"
+  },
+  "home": {
+    "title": "teste"
+  }
+}

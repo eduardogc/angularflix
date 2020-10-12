@@ -1,0 +1,17 @@
+<ul class="row angularflix-header">
+  <li class="angularflix-header-mobile-menu" (click)="toggleSidebar()"><i class="fas fa-bars fa-lg"></i></li>
+  <li class="angularflix-header-logo" (click)="redirect('/')"><img class="angularflix-header-logo-img" src="assets/img/logo-navbar.png" alt="Logo angularflix" /></li>
+  <li class="angularflix-header-item" [ngClass]="{ 'active': activeUrl === '/' }" (click)="redirect('/')">{{ 'header.home' | translate }}</li>
+  <li class="angularflix-header-item" [ngClass]="{ 'active': activeUrl === '/kids' }" (click)="redirect('/kids')">{{ 'header.kids' | translate }}</li>
+  <li class="angularflix-header-item" [ngClass]="{ 'active': activeUrl === '/lancamentos' }" (click)="redirect('/lancamentos')">{{ 'header.releases' | translate }}</li>
+  <li class="angularflix-header-controls">
+    <search-header></search-header>
+    <select class="angularflix-header-language" [(ngModel)]="selectedLang" (change)="useLanguage()">
+      <option value="en">EN</option>
+      <option value="pt">PT</option>
+      <option value="es">ES</option>
+      <option value="fr">FR</option>
+    </select>
+  </li>
+</ul>
+<angularflix-sidebar [toggle]="sidebarToggle" (close)="closeSidebar()"></angularflix-sidebar>

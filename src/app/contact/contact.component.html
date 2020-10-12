@@ -1,0 +1,37 @@
+<div class="Angularflix-content-wrapper">
+  <h2 class="contact-title">Gostaria de firmar uma parceria, ou nos dar uma sugestão?</h2>
+  <p class="contact-subtitle">Use o formulário abaixo para entrar em contato com a gente!</p>
+  <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="sendMail()">
+    <div class="form-group">
+      <label for="senderName" >Nome: </label>
+      <input class="form-input" type="text" id="senderName" name="senderName" formControlName="senderName" [ngClass]="{ 'is-invalid': submitted && f.senderName.errors }">
+      <div *ngIf="submitted && f.senderName.errors" class="invalid-feedback">
+        <div *ngIf="f.senderName.errors.required">O campo nome é obrigatório.</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="email">E-mail: </label>
+      <input class="form-input" type="email" id="email" name="email" formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+      <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+        <div *ngIf="f.email.errors.required">O e-mail é obrigatório.</div>
+        <div *ngIf="f.email.errors.email">E-mail precisa ser válido</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="subject">Assunto: </label>
+      <input class="form-input" type="text" id="subject" name="subject" formControlName="subject" [ngClass]="{ 'is-invalid': submitted && f.subject.errors }">
+      <div *ngIf="submitted && f.subject.errors" class="invalid-feedback">
+        <div *ngIf="f.subject.errors.required">O assunto da mensagem é obrigatório.</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="message">Sua mensagem: </label>
+      <textarea class="form-input" id="message" name="message" cols="30" rows="10" formControlName="message" [ngClass]="{ 'is-invalid': submitted && f.message.errors }"></textarea>
+      <div *ngIf="submitted && f.message.errors" class="invalid-feedback">
+        <div *ngIf="f.message.errors.required">Para enviar um e-mail, você precisa escrever uma mensagem.</div>
+        <div *ngIf="f.message.errors.maxlength">Envie uma mensagem de no máximo 720 caracteres.</div>
+      </div>
+    </div>
+    <button class="send-mail" type="submit">Enviar</button>
+  </form>
+</div>

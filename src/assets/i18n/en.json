@@ -1,0 +1,21 @@
+{
+  "header": {
+    "home": "Home",
+    "kids": "Kids",
+    "live": "Live",
+    "releases": "Releases",
+    "blog": "Blog",
+    "podcast": "Podcast"
+  },
+  "footer": {
+    "partnership": "TVCH is a partnership between",
+    "and": "and",
+    "allRightsReserved": "All rights reserved.",
+    "newsletter": "Newsletter",
+    "about-us": "About",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "test"
+  }
+}

@@ -1,0 +1,39 @@
+.footer {
+  padding: 25px 15px 15px;
+}
+.footer-social-networks {
+  margin-bottom: 0px;
+}
+.social-network {
+  cursor: pointer;
+  color: #bebebe;
+  padding-right: 15px;
+}
+.social-network:hover {
+  color: grey;
+  transition: color .5s;
+  text-decoration: none;
+}
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+.footer-link {
+  color: #bebebe;
+  font-size: 0.87em;
+  margin-top: 15px;
+
+  &.no-size {
+    font-size: 1em;
+  }
+}
+.footer-partner {
+  color: #bebebe;
+  font-size: 0.7em;
+}
+.footer-copyright {
+  color: #bebebe;
+  font-size: 0.7em;
+  margin-top: 5px;
+}

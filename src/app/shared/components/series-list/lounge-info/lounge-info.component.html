@@ -1,0 +1,8 @@
+<div class="lounge-item-info" *ngIf="active" [ngStyle]="{ 'background': 'linear-gradient(to left, rgba(0, 0, 0, 0.27), rgb(25, 25, 25)), url('+ imgBackgroundUrl +') no-repeat center right' }">
+    <div class="lounge-info-close" (click)="closeInfo()"><i class="fas fa-times fa-lg"></i></div>
+    <div class="lounge-info-block">
+      <p class="lounge-info-title">{{ title }}</p>
+      <p class="lounge-info-description">{{ description }}</p>
+      <button class="btn-see-more" (click)="seeMore()">Assista</button>
+    </div>
+</div>

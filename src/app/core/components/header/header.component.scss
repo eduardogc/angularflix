@@ -1,0 +1,88 @@
+.angularflix-header {
+  position: fixed;
+  z-index: 998;
+  width: 100%;
+  border: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 54px;
+  background-color: #191919;
+  box-shadow: 0px 0px 1px 1px #141414;
+  padding: 0px;
+}
+.angularflix-header-item {
+  color: #fdfdfd;
+  padding: 0 15px;
+  cursor: pointer;
+  line-height: 48px;
+  border: none;
+
+  &.active {
+    font-weight: bold;
+  }
+}
+.angularflix-header-item:hover {
+  color: #bebebe;
+  transition: color .5s;
+  text-decoration: none;
+}
+.angularflix-header-controls {
+  margin-left: auto;
+  margin-right: 9px;
+}
+.angularflix-header-language {
+  color: #fdfdfd;
+  width: 45px;
+  height: 27px;
+  font-size: 0.81em;
+  text-transform: uppercase;
+  background-color: rgba(25, 25, 25, 0.4);
+  border: 1px solid #fdfdfd;
+  margin-left: 15px;
+  outline: 0;
+  cursor: pointer;
+  margin-right: 15px;
+}
+.angularflix-header-mobile-menu {
+  cursor: pointer;
+  color: #fdfdfd;
+  display: none;
+  margin-left: 15px;
+}
+.angularflix-header-mobile-menu:hover {
+  color: #bebebe;
+  transition: color .5s;
+  text-decoration: none;
+}
+.angularflix-header-mobile-menu-img {
+  height: 23px;
+  width: 19px;
+}
+.angularflix-header-logo-img {
+  height: 53px;
+  margin-left: 19px;
+}
+
+@media screen and (max-width: 768px) {
+  .angularflix-header-item {
+    display: none;
+  }
+  .angularflix-header-mobile-menu {
+    display: inline;
+  }
+  .angularflix-header-controls {
+    margin-left: 0px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 450px) {
+  .angularflix-header-language {
+    display: none;
+  }
+}
+@media screen and (max-width: 375px) {
+  .angularflix-header-controls {
+    width: 45%;
+  }
+}

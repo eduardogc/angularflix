@@ -1,0 +1,20 @@
+.search-header-input {
+  border-radius: 20px;
+  border: 1px solid #fdfdfd;
+  line-height: 27px;
+  height: 27px;
+  color: #fdfdfd;
+  width: 190px;
+  background: url('src/assets/img/magnifier.png') no-repeat scroll #191919 9px;
+  background-size: 13px;
+  padding-left: 32px;
+  font-size: 0.81em;
+  caret-color:#fdfdfd;
+  outline: 0;
+}
+@media screen and (max-width: 375px) {
+  .search-header-input {
+    width: 81%;
+    font-size: 16px;
+  }
+}
