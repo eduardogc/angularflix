@@ -9,16 +9,22 @@ This example application uses 2 services:
 Be sure you have Node.js installed in a stable or LTS version.
 
 install the dependencies using 
-```npm install````
+```
+npm install
+```
 
 # Running
 run the application with:
-```ng serve```
+```
+ng serve
+```
 wich opens a project in localhost:4200
 
 # Building a package
 Create a dist for production using:
-```ng build --prod````
+```
+ng build --prod
+```
 
 # Contributing
 There are so much space for improvements in this code, so feel free to fork it or send your PR :) (smile)
