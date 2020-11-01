@@ -1,0 +1,5 @@
+  {
+    "typescriptHero.imports.organizeOnSave": true,
+    "typescriptHero.imports.multiLineTrailingComma": false,
+    "editor.formatOnSave": false
+  }
