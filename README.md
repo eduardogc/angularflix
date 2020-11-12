@@ -27,7 +27,7 @@ ng build --prod
 ```
 
 # Commit in project
-To you use commit lint, follow the stards below
+To you use commit lint, follow the pattern below
 ```
 feat: text your commit
 ```
