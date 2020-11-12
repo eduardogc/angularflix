@@ -26,5 +26,15 @@ Create a dist for production using:
 ng build --prod
 ```
 
+# Commit in project
+To you use commit lint, follow the stards below
+```
+feat: text your commit
+```
+or
+```
+feat(text): text your commit
+```
+
 # Contributing
 There are so much space for improvements in this code, so feel free to fork it or send your PR :) (smile)
