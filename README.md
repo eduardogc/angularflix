@@ -36,5 +36,17 @@ or
 feat(text): text your commit
 ```
 
+# Generate changelog
+This command create a new tag and change version package.json
+```
+npm run release
+```
+
+this command create a new tag but not change version package.json
+```
+npm run release -- --first-release
+```
+
+
 # Contributing
 There are so much space for improvements in this code, so feel free to fork it or send your PR :) (smile)

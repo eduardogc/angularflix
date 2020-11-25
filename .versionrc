@@ -1,0 +1,13 @@
+{
+  "types": [
+    {"type": "feat", "section": "Features"},
+    {"type": "fix", "section": "Hotfix"},
+    {"type": "chore", "hidden": true},
+    {"type": "docs", "section": "Docummentation"},
+    {"type": "style", "hidden": true},
+    {"type": "refactor", "hidden": true},
+    {"type": "perf", "section": "Performance"},
+    {"type": "test", "hidden": true}
+  ],
+  "releaseCommitMessageFormat": "chore(release): {{currentTag}} [skip ci]"
+}
