@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   templateUrl: './lounge-info.component.html',
   styleUrls: ['./lounge-info.component.scss']
 })
-export class LoungeInfoComponent implements OnInit {
+export class LoungeInfoComponent {
 
   @Input() active: boolean;
   @Input() description: string;
@@ -15,10 +15,7 @@ export class LoungeInfoComponent implements OnInit {
   @Input() title: string;
   @Output() close = new EventEmitter<any>();
 
-  constructor(private router: Router) {}
-
-  ngOnInit() {
-  }
+  constructor(private router: Router) { }
 
   closeInfo() {
     this.close.emit();

@@ -1,19 +1,15 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
-  selector: 'Angularflix-autocomplete',
+  selector: 'angularflix-autocomplete',
   templateUrl: './autocomplete.component.html',
   styleUrls: ['./autocomplete.component.scss']
 })
-export class AutocompleteComponent implements OnInit {
+export class AutocompleteComponent {
 
-  @Input() data: any;
+  @Input() data: [];
   @Input() show: boolean;
   @Output() hide = new EventEmitter<any>();
-
-  constructor() { }
-
-  ngOnInit() {}
 
   search(id) {
     this.hide.emit(id);

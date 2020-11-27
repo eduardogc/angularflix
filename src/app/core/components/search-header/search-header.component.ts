@@ -1,22 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { HeaderService } from '../../services/header.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'search-header',
   templateUrl: './search-header.component.html',
   styleUrls: ['./search-header.component.scss']
 })
-export class SearchHeaderComponent implements OnInit {
+export class SearchHeaderComponent {
 
   autoCompleteActive = false;
   autoCompleteResults = [];
   searchText = '';
 
   constructor(private headerService: HeaderService, private router: Router) {}
-
-  ngOnInit() {}
 
   getAutoComplete() {
     if (this.searchText === '') {

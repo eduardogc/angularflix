@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { GhostListComponent } from './ghost-list.component';
 
@@ -6,11 +6,11 @@ describe('GhostListComponent', () => {
   let component: GhostListComponent;
   let fixture: ComponentFixture<GhostListComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ GhostListComponent ]
+      declarations: [GhostListComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

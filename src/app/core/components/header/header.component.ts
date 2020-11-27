@@ -5,7 +5,7 @@ import { TranslateService } from '@ngx-translate/core';
 
 
 @Component({
-  selector: 'Angularflix-header',
+  selector: 'angularflix-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })

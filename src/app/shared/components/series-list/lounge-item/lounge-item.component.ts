@@ -15,8 +15,6 @@ export class LoungeItemComponent implements OnInit {
   @Input() title: string;
   @Output() openInfo = new EventEmitter<any>();
 
-  constructor() { }
-
   ngOnInit() {
     this.borderColor = `3px solid ${this.borderColor}`;
   }

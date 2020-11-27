@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss']
 })
-export class SidebarComponent implements OnInit {
+export class SidebarComponent {
 
   @Input() toggle: boolean;
   @Output() close = new EventEmitter<any>();
@@ -14,8 +14,6 @@ export class SidebarComponent implements OnInit {
   activeUrl = '/';
 
   constructor(private router: Router) { }
-
-  ngOnInit() {}
 
   redirect(url) {
     this.activeUrl = url;

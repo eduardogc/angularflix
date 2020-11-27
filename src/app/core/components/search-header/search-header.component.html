@@ -1,2 +1,4 @@
-<input class="search-header-input" type="text" [(ngModel)]="searchText" (ngModelChange)="getAutoComplete()" (focus)="clearInput()"/>
-<Angularflix-autocomplete [show]="autoCompleteActive" [data]="autoCompleteResults" (hide)="hideAndSearch($event)"></Angularflix-autocomplete>
+<input class="search-header-input" type="text" [(ngModel)]="searchText" (ngModelChange)="getAutoComplete()"
+  (focus)="clearInput()" />
+<angularflix-autocomplete [show]="autoCompleteActive" [data]="autoCompleteResults" (hide)="hideAndSearch($event)">
+</angularflix-autocomplete>

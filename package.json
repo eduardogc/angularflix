@@ -9,11 +9,13 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "release": "standard-version"
+    "release": "standard-version",
+    "pull-request-validator": "npm run lint"
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-push": "npm run pull-request-validator"
     }
   },
   "dependencies": {

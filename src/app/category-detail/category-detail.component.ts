@@ -49,7 +49,9 @@ export class CategoryDetailComponent implements OnInit {
         return {
           playlistId: 'PLHvLxHvtgDGaknHO6bv0aV4rkcjuoKZM6',
           videoId: item.snippet.resourceId.videoId,
-          imgUrl: item.snippet.thumbnails ? item.snippet.thumbnails.medium.url : 'https://storage.googleapis.com/Angularflix-service.appspot.com/no-img.png'
+          imgUrl: item.snippet.thumbnails ?
+            item.snippet.thumbnails.medium.url :
+            'https://storage.googleapis.com/Angularflix-service.appspot.com/no-img.png'
         };
       });
       this.categoryVideos = [...this.categoryVideos, ...nextVideos];

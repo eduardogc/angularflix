@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LoungeItemComponent } from './lounge-item.component';
 
@@ -6,11 +6,11 @@ describe('CategoriesLoungeComponent', () => {
   let component: LoungeItemComponent;
   let fixture: ComponentFixture<LoungeItemComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ LoungeItemComponent ]
+      declarations: [LoungeItemComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

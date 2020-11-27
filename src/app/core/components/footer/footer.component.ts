@@ -1,16 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'Angularflix-footer',
+  selector: 'angularflix-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss']
 })
-export class FooterComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
+export class FooterComponent {
 
   redirect(socialNetwork) {
     switch (socialNetwork) {

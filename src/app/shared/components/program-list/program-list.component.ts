@@ -11,7 +11,6 @@ export class ProgramListComponent implements OnInit, AfterViewInit {
   @Input() data: any;
   @Input() playlistId?: any;
 
-
   hoverList = false;
   leftScrollable = false;
   scrollOffset = 0;
@@ -57,10 +56,10 @@ export class ProgramListComponent implements OnInit, AfterViewInit {
 
   redirectTo(videoId, playlistId) {
     if (!playlistId) {
-      this.router.navigateByUrl('/', {skipLocationChange: true}).then(() =>
+      this.router.navigateByUrl('/', { skipLocationChange: true }).then(() =>
         this.router.navigate([`/player/${videoId}`]));
     } else {
-      this.router.navigateByUrl('/', {skipLocationChange: true}).then(() =>
+      this.router.navigateByUrl('/', { skipLocationChange: true }).then(() =>
         this.router.navigate([`/player/${playlistId}/${videoId}`]));
     }
   }
@@ -75,18 +74,18 @@ export class ProgramListComponent implements OnInit, AfterViewInit {
   }
 
   smoothHorizontalScrolling(e, time, amount, start) {
-    var eAmt = amount / 100;
-    var curTime = 0;
-    var scrollCounter = 0;
+    const eAmt = amount / 100;
+    let curTime = 0;
+    let scrollCounter = 0;
     while (curTime <= time) {
-        window.setTimeout(this.SHS_B, curTime, e, scrollCounter, eAmt, start);
-        curTime += time / 100;
-        scrollCounter++;
+      window.setTimeout(this.SHS_B, curTime, e, scrollCounter, eAmt, start);
+      curTime += time / 100;
+      scrollCounter++;
     }
   }
 
   SHS_B(e, sc, eAmt, start) {
-      e.scrollLeft = (eAmt * sc) + start;
+    e.scrollLeft = (eAmt * sc) + start;
   }
 
 }

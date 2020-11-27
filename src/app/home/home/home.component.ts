@@ -2,9 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { HomeService } from 'src/app/core/services/home.service';
-import { SeriesListService } from 'src/app/core/services/series-list.service';
-import { CategoryDetailComponent } from 'src/app/category-detail/category-detail.component';
-
 
 @Component({
   selector: 'app-home',
@@ -18,10 +15,10 @@ export class HomeComponent implements OnInit {
   subscribeActive = true;
   videos: any;
 
-  constructor(private homeService: HomeService, private seriesListService: SeriesListService, private router: Router) {}
+  constructor(private homeService: HomeService, private router: Router) { }
 
   ngOnInit() {
-    if(!this.hasExpired()) {
+    if (!this.hasExpired()) {
       this.subscribeActive = false;
     }
     this.homeService.loadVideosNew().subscribe(response => {
@@ -33,17 +30,17 @@ export class HomeComponent implements OnInit {
   }
 
   hasExpired() {
-    const expiresDateString = localStorage.getItem('hideSubscribeBar')
-    if(!expiresDateString) {
-      return true
+    const expiresDateString = localStorage.getItem('hideSubscribeBar');
+    if (!expiresDateString) {
+      return true;
     }
-    const currentDate = new Date().getTime()
-    const expiresDate = Date.parse(expiresDateString)
+    const currentDate = new Date().getTime();
+    const expiresDate = Date.parse(expiresDateString);
     if (currentDate >= expiresDate) {
-      localStorage.removeItem('hideSubscribeBar')
-      return true
+      localStorage.removeItem('hideSubscribeBar');
+      return true;
     }
-    return false
+    return false;
   }
 
   redirectWhatsapp() {
@@ -57,6 +54,6 @@ export class HomeComponent implements OnInit {
   hideSubscribe() {
     this.subscribeActive = false;
     const expiresDate = new Date(new Date().getTime() + 60 * 60 * 24 * 1000);
-    localStorage.setItem('hideSubscribeBar', expiresDate.toString())
+    localStorage.setItem('hideSubscribeBar', expiresDate.toString());
   }
 }
