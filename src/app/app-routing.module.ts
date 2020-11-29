@@ -4,65 +4,65 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+    loadChildren: async () => (await import('./home/home.module')).HomeModule
   },
   // en
   {
     path: 'about-us',
-    loadChildren: () => import('./about-us/about-us.module').then(m => m.AboutUsModule)
+    loadChildren: async () => (await import('./about-us/about-us.module')).AboutUsModule
   },
   {
     path: 'contact',
-    loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
+    loadChildren: async () => (await import('./contact/contact.module')).ContactModule
   },
   {
     path: 'presenters',
-    loadChildren: () => import('./presenters/presenters.module').then(m => m.PresentersModule)
+    loadChildren: async () => (await import('./presenters/presenters.module')).PresentersModule
   },
   {
     path: 'player/:playlistId/:videoId',
-    loadChildren: () => import('./video-player/video-player.module').then(m => m.VideoPlayerModule)
+    loadChildren: async () => (await import('./video-player/video-player.module')).VideoPlayerModule
   },
   {
     path: 'player/:videoId',
-    loadChildren: () => import('./video-player/video-player.module').then(m => m.VideoPlayerModule)
+    loadChildren: async () => (await import('./video-player/video-player.module')).VideoPlayerModule
   },
   {
     path: 'kids',
-    loadChildren: () => import('./kids/kids.module').then(m => m.KidsModule)
+    loadChildren: async () => (await import('./kids/kids.module')).KidsModule
   },
   {
     path: 'lancamentos',
-    loadChildren: () => import('./releases/releases.module').then(m => m.ReleasesModule)
+    loadChildren: async () => (await import('./releases/releases.module')).ReleasesModule
   },
   {
     path: 'categoria-detalhe/:playlistId',
-    loadChildren: () => import('./category-detail/category-detail.module').then(m => m.CategoryDetailModule)
+    loadChildren: async () => (await import('./category-detail/category-detail.module')).CategoryDetailModule
   },
   // pt
   {
     path: 'sobre-nos',
-    loadChildren: () => import('./about-us/about-us.module').then(m => m.AboutUsModule)
+    loadChildren: async () => (await import('./about-us/about-us.module')).AboutUsModule
   },
   {
     path: 'contato',
-    loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
+    loadChildren: async () => (await import('./contact/contact.module')).ContactModule
   },
   {
     path: 'apresentadores',
-    loadChildren: () => import('./presenters/presenters.module').then(m => m.PresentersModule)
+    loadChildren: async () => (await import('./presenters/presenters.module')).PresentersModule
   },
   {
     path: 'player/:videoId',
-    loadChildren: () => import('./video-player/video-player.module').then(m => m.VideoPlayerModule)
+    loadChildren: async () => (await import('./video-player/video-player.module')).VideoPlayerModule
   },
   {
     path: 'kids',
-    loadChildren: () => import('./kids/kids.module').then(m => m.KidsModule)
+    loadChildren: async () => (await import('./kids/kids.module')).KidsModule
   },
   {
     path: '**',
-    loadChildren: () => import('./not-found/not-found.module').then(m => m.NotFoundModule)
+    loadChildren: async () => (await import('./not-found/not-found.module')).NotFoundModule
   }
 ];
 
