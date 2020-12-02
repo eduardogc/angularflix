@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
 import { SwUpdate } from '@angular/service-worker';
 
 @Component({
@@ -10,16 +9,7 @@ import { SwUpdate } from '@angular/service-worker';
 export class AppComponent implements OnInit {
   title = 'Angularflix-portal';
 
-  constructor(private router: Router, private swUpdate: SwUpdate) {
-    this.router.events.subscribe(item => {
-      if (item instanceof NavigationEnd) {
-        const gtmTag = {
-          event: 'page',
-          pageName: item.url
-        };
-      }
-    });
- }
+  constructor(private swUpdate: SwUpdate) { }
 
   ngOnInit() {
     if (this.swUpdate.isEnabled) {

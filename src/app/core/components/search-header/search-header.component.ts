@@ -14,7 +14,7 @@ export class SearchHeaderComponent {
   autoCompleteResults = [];
   searchText = '';
 
-  constructor(private headerService: HeaderService, private router: Router) {}
+  constructor(private headerService: HeaderService, private router: Router) { }
 
   getAutoComplete() {
     if (this.searchText === '') {
@@ -23,10 +23,10 @@ export class SearchHeaderComponent {
       this.headerService.search(this.searchText)
         .subscribe(response => {
           this.autoCompleteResults = response['items'].map(items => {
-            return {id: items.id.videoId, title: items.snippet.title.split('- T')[0].trim()};
+            return { id: items.id.videoId, title: items.snippet.title.split('- T')[0].trim() };
           });
           this.autoCompleteActive = true;
-        }, error => {
+        }, () => {
           this.autoCompleteActive = true;
         });
     }
@@ -45,8 +45,8 @@ export class SearchHeaderComponent {
   }
 
   redirectTo(uri) {
-    this.router.navigateByUrl('/', {skipLocationChange: true}).then(() =>
-    this.router.navigate([uri]));
+    this.router.navigateByUrl('/', { skipLocationChange: true }).then(() =>
+      this.router.navigate([uri]));
   }
 
 }

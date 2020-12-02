@@ -10,7 +10,7 @@ export class PlayerService {
 
   constructor(private httpClient: HttpClient) { }
 
-  loadVideoInfo(videoId) {
+  loadVideoInfo() {
     return this.httpClient.get(`${serviceUrl}/video`);
   }
 
@@ -20,12 +20,12 @@ export class PlayerService {
 
   getRelatedVideos(videoId) {
     return this.httpClient.get(`${baseUrl}/search/?part=snippet&channelId=`
-                              + `${channelId}&key=${accessKey}&order=date&maxResults=5&type=video&relatedToVideoId=${videoId}`);
+      + `${channelId}&key=${accessKey}&order=date&maxResults=5&type=video&relatedToVideoId=${videoId}`);
   }
 
   nextPageRelatedVideos(nextPageToken, videoId) {
     return this.httpClient.get(`${baseUrl}/search/?part=snippet&channelId=`
-                              + `${channelId}&key=${accessKey}&order=date&maxResults=5&type=video&relatedToVideoId=${videoId}`
-                              + `&pageToken=${nextPageToken}`);
+      + `${channelId}&key=${accessKey}&order=date&maxResults=5&type=video&relatedToVideoId=${videoId}`
+      + `&pageToken=${nextPageToken}`);
   }
 }

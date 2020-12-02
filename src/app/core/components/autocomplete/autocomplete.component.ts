@@ -7,11 +7,11 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class AutocompleteComponent {
 
-  @Input() data: [];
+  @Input() data: any[];
   @Input() show: boolean;
   @Output() hide = new EventEmitter<any>();
 
-  search(id) {
+  search(id?) {
     this.hide.emit(id);
   }
 

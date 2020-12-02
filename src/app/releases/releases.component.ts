@@ -10,7 +10,7 @@ import { ReleasesService } from '../core/services/releases.service';
 })
 export class ReleasesComponent implements OnInit {
 
-  kidsVideos: [];
+  kidsVideos: any[];
 
   constructor(private releasesService: ReleasesService, private router: Router) { }
 

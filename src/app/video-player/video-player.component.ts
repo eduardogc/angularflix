@@ -38,7 +38,7 @@ export class VideoPlayerComponent implements OnInit {
     const youtubeHtml = this.getTranslationForTemplate(videoUrlString);
     this.youtubeIframe = this.domSanitizer.bypassSecurityTrustHtml(youtubeHtml);
     this.videoUrl = this.domSanitizer.bypassSecurityTrustResourceUrl(videoUrlString);
-    this.loadVideoInfo(videoId);
+    this.loadVideoInfo();
     this.loadRelatedVideos(videoId);
     this.shareUrl = `https://tvch.com.br`;
     if (this.playlistId) {
@@ -63,8 +63,8 @@ export class VideoPlayerComponent implements OnInit {
     }
   }
 
-  loadVideoInfo(videoId) {
-    this.playerService.loadVideoInfo(videoId)
+  loadVideoInfo() {
+    this.playerService.loadVideoInfo()
       .subscribe(result => {
         const snippet = result['data'].items[0].snippet;
         this.title = snippet.title.split(' - T')[0];

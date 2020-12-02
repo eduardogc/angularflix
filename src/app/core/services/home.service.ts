@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { accessKey, baseUrl, serviceUrl, channelId } from './api';
+import { serviceUrl } from './api';
 
 @Injectable({
   providedIn: 'root'
