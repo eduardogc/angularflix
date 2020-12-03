@@ -141,8 +141,5 @@
       }
     }
   },
-  "defaultProject": "Angularflix-portal",
-  "cli": {
-    "analytics": "d71f16cf-9383-40e0-848b-1778456e3e05"
-  }
+  "defaultProject": "Angularflix-portal"
 }
